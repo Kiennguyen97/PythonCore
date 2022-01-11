@@ -16,10 +16,12 @@ def calculate_explosion(): #1_Day1
     cargo_weight = input("Enter your cargo_weight: ")
     max_weight = input("Enter your max weight: ")
     chance_of_explosion = str(5 * float(cargo_weight) / ( float(max_weight) - float(weight) ))
-    print("A roket with " + weight + " kg weight carrying "
-          + cargo_weight + " kg cargo has chance of explosion equal to "
-          + chance_of_explosion + " % if its maximum weight is "
-          + max_weight + " kg")
+    # print("A roket with " + weight + " kg weight carrying "
+    #       + cargo_weight + " kg cargo has chance of explosion equal to "
+    #       + chance_of_explosion + " % if its maximum weight is "
+    #       + max_weight + " kg")
+
+    print("A roket with {} kg weight carrying  {} kg cargo has chance of explosion equal to {} % if its maximum weight is  {} kg".format(weight, cargo_weight, chance_of_explosion, max_weight))
 
 def calculate_explosion2(): #2_Day1
     cargo_weights = [4000,9000]
@@ -56,6 +58,12 @@ def create_adder(x):
         return x + y
     return adder
 
+def create_double():
+    def double(x):
+        return x*2
+    return double
+
+
 def higher_order():
     add_10 = create_adder(10)
     print(list(map(add_10,[1,2,3])))
@@ -82,6 +90,10 @@ def test_math():
 if __name__ == '__main__':
     print_hi('PyCharm')
     # calculate_explosion()
+
+    double = create_double()
+    print(double(10))
+
     # calculate_explosion2()
     # add(y=6, x=5)
     # swap_xy(1, 2)
