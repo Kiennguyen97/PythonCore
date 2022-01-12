@@ -1,6 +1,20 @@
 # 1. =============================================
 # Write a program that asks the user how many Fibonnaci numbers to generate and then generates them.
 
+def fibonnaci():
+    number_fibo =  float(input('How many  Fibonnaci number ?: '))
+    while number_fibo < 0:
+        number_fibo = float(input('Please  Fibonnaci number > 0: '))
+
+    return fibo_function(number_fibo)
+
+def fibo_function(n):
+    if n < 2:
+        return n
+    else:
+        return fibo_function(n-1) + fibo_function(n-2)
+
+
 # 2. =============================================
 # Ask the user for a number and determine whether the number is prime or not.
 # (For those who have forgotten, a prime number is a number that has no divisors.)

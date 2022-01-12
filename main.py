@@ -7,6 +7,8 @@ import math as m
 from math import ceil, floor
 import random
 
+from exercise1 import exercise1
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -89,10 +91,12 @@ def test_math():
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+
+    print(exercise1.fibonnaci())
     # calculate_explosion()
 
-    double = create_double()
-    print(double(10))
+    # double = create_double()
+    # print(double(10))
 
     # calculate_explosion2()
     # add(y=6, x=5)
