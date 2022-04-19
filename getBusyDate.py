@@ -25,3 +25,4 @@ date_end = datetime.strptime('2022-04-27', '%Y-%m-%d').date()
 week_mask = [1, 1, 1, 1, 1, 0, 0]
 holidays = ['2022-04-25', '2022-04-26']
 number_day = busday_count(date_start, date_end, holidays=holidays, weekmask=week_mask)
+print(number_day)
